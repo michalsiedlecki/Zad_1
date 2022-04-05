@@ -9,6 +9,7 @@ describe('Tests for Contact-Us', function(){
     })
     contactUsPage.navigate()
   })
+
   it('Check Reset button', function() {
     contactUsPage.setFirstName(this.testdata.firstName)
     contactUsPage.checkFirstName(this.testdata.firstName)
@@ -29,7 +30,7 @@ describe('Tests for Contact-Us', function(){
     contactUsPage.setFirstName(this.testdata.firstName)
     contactUsPage.setEmail(this.testdata.email)
     contactUsPage.clickSubmitButton()
-    contactUsPage.checkErrorMessage(this.testdata.errorMessageForEmptyFields)
+    contactUsPage.checkResponseMessage(this.testdata.errorMessageForEmptyFields)
   })
 
   it('Check error message for invalid email', function(){
@@ -38,7 +39,15 @@ describe('Tests for Contact-Us', function(){
     contactUsPage.setEmail(this.testdata.message)
     contactUsPage.setMessage(this.testdata.message)
     contactUsPage.clickSubmitButton()
-    contactUsPage.checkErrorMessage(this.testdata.errorMessageForInvalidEmail)
+    contactUsPage.checkResponseMessage(this.testdata.errorMessageForInvalidEmail)
   })
 
+  it('Check happy path for form', function(){
+    contactUsPage.setFirstName(this.testdata.firstName)
+    contactUsPage.setLastName(this.testdata.lastName)
+    contactUsPage.setEmail(this.testdata.email)
+    contactUsPage.setMessage(this.testdata.message)
+    contactUsPage.clickSubmitButton()
+    contactUsPage.checkResponseMessage(this.testdata.messageForHappyPath)
+  })
 })
