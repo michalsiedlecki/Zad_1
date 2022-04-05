@@ -28,4 +28,12 @@ describe('Tests for Contact-Us', function(){
     contactUsPage.checkEmail('')
     contactUsPage.checkMessage('')
   })
+
+  it('Check error message for empty fields', function(){
+  contactUsPage.setFirstName(this.testdata.firstName)
+  contactUsPage.setEmail(this.testdata.email)
+  contactUsPage.clickSubmitButton()
+  cy.contains(this.testdata.errorMessageForEmptyFields)
+  })
+
 })
