@@ -70,6 +70,10 @@ export class ContactUsPage{
         .get(submitButton)
         .click()
     }
+
+    checkErrorMessage(message){
+        cy.contains(message)
+    }
 }
 
 export const contactUsPage = new ContactUsPage()

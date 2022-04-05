@@ -3,5 +3,7 @@
   "lastName": "Siedlecki",
   "email": "michal.siedlecki@gmail.com",
   "message": "hello ...",
-  "errorMessageForEmptyFields" : "Error: all fields are required"
+  "errorMessageForEmptyFields" : "Error: all fields are required",
+  "errorMessageForInvalidEmail" : "Error: Invalid email address"
+
 }
