@@ -1,0 +1,21 @@
+{
+    "backendLanguage":[
+        "JAVA",
+        "C#",
+        "Python",
+        "SQL"
+    ],
+    "tools":[
+        "Eclipse",
+        "Maven",
+        "TestNG",
+        "JUnit"
+    ],
+    "frontLanguage":[
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "JQuery"
+    ]
+    
+}
