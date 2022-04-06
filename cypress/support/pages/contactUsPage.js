@@ -3,6 +3,7 @@ var firstName = '[name="first_name"]'
 var lastName = '[name="last_name"]'
 var message = '[name="message"]'
 var resetButton = '[type="reset"]'
+var submitButton = '[type="submit"]'
 var urlContactUs = 'https://webdriveruniversity.com/Contact-Us/contactus.html'
 
 export class ContactUsPage{
@@ -62,6 +63,16 @@ export class ContactUsPage{
         cy
         .get(resetButton)
         .click()
+    }
+
+    clickSubmitButton(){
+        cy
+        .get(submitButton)
+        .click()
+    }
+
+    checkErrorMessage(message){
+        cy.contains(message)
     }
 }
 
