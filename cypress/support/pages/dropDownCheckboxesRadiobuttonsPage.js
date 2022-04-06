@@ -12,12 +12,24 @@ export class DropDownCheckboxesRadiobuttonsPage{
         cy.get(backendLanguageDropDown).select(language)
     }
 
+    checkBackendLanguageValue(language){
+        cy.get(backendLanguageDropDown).should('have.value', language.toLowerCase())
+    }
+
     chooseTool(tool){
         cy.get(toolsDropDown).select(tool)
     }
 
+    checkTool(tool){
+        cy.get(toolsDropDown).should('have.value', tool.toLowerCase())
+    }
+
     chooseFrontLanguag(language){
         cy.get(frontLanguageDropDown).select(language)
+    }
+
+    checkFrontLanguag(language){
+        cy.get(frontLanguageDropDown).should('have.value', language.toLowerCase())
     }
 
 }

@@ -13,18 +13,22 @@ describe('Tests for Dropdown, radio buttons and checkboxes', function(){
   it('Check First Dropdown', function() {
     for (var i = 0; i< this.testdata.backendLanguage.length; i++){ 
       dropDownCheckboxesRadiobuttonsPage.chooseBackendLanguage(this.testdata.backendLanguage[i])
+      dropDownCheckboxesRadiobuttonsPage.checkBackendLanguageValue(this.testdata.backendLanguage[i])
+      
     }
   })
 
   it('Check Second Dropdown', function() {
     for (var i = 0; i< this.testdata.tools.length; i++){ 
       dropDownCheckboxesRadiobuttonsPage.chooseTool(this.testdata.tools[i])
+      dropDownCheckboxesRadiobuttonsPage.checkTool(this.testdata.tools[i])
     }
   })
 
   it('Check Third Dropdown', function() {
     for (var i = 0; i< this.testdata.frontLanguage.length; i++){ 
       dropDownCheckboxesRadiobuttonsPage.chooseFrontLanguag(this.testdata.frontLanguage[i])
+      dropDownCheckboxesRadiobuttonsPage.checkFrontLanguag(this.testdata.frontLanguage[i])
     }
   })
 })
