@@ -31,4 +31,22 @@ describe('Tests for Dropdown, radio buttons and checkboxes', function(){
       dropDownCheckboxesRadiobuttonsPage.checkFrontLanguag(this.testdata.frontLanguage[i])
     }
   })
+
+  it('Test checkboxes', function() {
+    for (var i = 0; i< this.testdata.checkboxes.length; i++){
+      dropDownCheckboxesRadiobuttonsPage.checkForCheckbox(this.testdata.checkboxes[i]) 
+    }
+    for (var i = 0; i< this.testdata.checkboxes.length; i++){
+      if(i%2==0){
+        dropDownCheckboxesRadiobuttonsPage.uncheckForCheckbox(this.testdata.checkboxes[i])
+      }
+    }
+  })
+
+  it.only('Test radiobuttons', function() {
+    for (var i = 0; i< this.testdata.radioButtons.length; i++){ 
+      dropDownCheckboxesRadiobuttonsPage.chooseRadioButtonColour(this.testdata.radioButtons[i])      
+    }
+  })
+
 })

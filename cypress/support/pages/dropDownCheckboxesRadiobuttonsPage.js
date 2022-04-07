@@ -32,6 +32,17 @@ export class DropDownCheckboxesRadiobuttonsPage{
         cy.get(frontLanguageDropDown).should('have.value', language.toLowerCase())
     }
 
+    checkForCheckbox(checkbox){
+        cy.get(checkbox).check().should('be.checked')
+    }
+
+    uncheckForCheckbox(checkbox){
+        cy.get(checkbox).uncheck().should('not.be.checked')
+    }
+
+    chooseRadioButtonColour(colour){
+        cy.get(colour).check().should('be.checked')
+    }
 }
 
 export const dropDownCheckboxesRadiobuttonsPage = new DropDownCheckboxesRadiobuttonsPage()
