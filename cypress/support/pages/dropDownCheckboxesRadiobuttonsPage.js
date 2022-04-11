@@ -1,10 +1,11 @@
 var backendLanguageDropDown = '#dropdowm-menu-1'
 var backendLanguageDropDownOptions = '#dropdowm-menu-1 option'
+var checkboxInputs = '#checkboxes input'
 var toolsDropDown = '#dropdowm-menu-2'
 var toolsLanguageDropDownOptions = '#dropdowm-menu-2 option'
 var frontLanguageDropDown = '#dropdowm-menu-3'
 var frontLanguageDropDownOptions = '#dropdowm-menu-3 option'
-var radioButtonOptions = '#radio-buttons input'
+var radioButtonInputs = '#radio-buttons input'
 var urlContactUs = 'https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html'
 
 export class DropDownCheckboxesRadiobuttonsPage{
@@ -48,6 +49,10 @@ export class DropDownCheckboxesRadiobuttonsPage{
         cy.get(frontLanguageDropDown).should('have.value', language.toLowerCase())
     }
 
+    checkNumberOfCheckboxes(number){
+        cy.get(checkboxInputs).should('have.length', number)
+    }
+
     checkForCheckbox(checkbox){
         cy.get(checkbox).check().should('be.checked')
     }
@@ -56,8 +61,8 @@ export class DropDownCheckboxesRadiobuttonsPage{
         cy.get(checkbox).uncheck().should('not.be.checked')
     }
 
-    checkRadioButtonNumberOfOptions(number){
-        cy.get(radioButtonOptions).should('have.length', number)
+    checkNumberOfRadioButtons(number){
+        cy.get(radioButtonInputs).should('have.length', number)
     }
 
     chooseRadioButtonColour(colour){
