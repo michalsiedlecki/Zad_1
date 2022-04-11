@@ -58,6 +58,13 @@ describe('Tests for Dropdown, radio buttons and checkboxes', function(){
     })
   })
 
+  it("Check value of checkboxes", function (){
+    cy.fixture('dropDownCheckboxesRadiobuttons').then( function(testdata){
+      this.testdata = testdata
+      dropDownCheckboxesRadiobuttonsPage.checkRadioButtonNumberOfOptions(this.testdata.radioButtons.length)
+    })
+  })
+
   it('Test checkboxes', function() {
     cy.fixture('dropDownCheckboxesRadiobuttons').then( function(testdata){
       this.testdata = testdata
