@@ -12,5 +12,6 @@ describe('Tests for Ajax-loader', function(){
 
   it('Check Ajax-loader', function() {
       ajaxLoader.waitForPageToLoad(7000)
+      ajaxLoader.clickGreenButton()
     })  
 })

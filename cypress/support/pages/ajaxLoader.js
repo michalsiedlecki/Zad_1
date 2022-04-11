@@ -1,4 +1,5 @@
-var clickButton = '#myDiv'
+var div = '#myDiv'
+var greenButton = '#button1'
 var urlContactUs = 'https://webdriveruniversity.com/Ajax-Loader/index.html'
 
 
@@ -8,7 +9,11 @@ export class AjaxLoader{
     }
 
     waitForPageToLoad(time){
-        cy.get(clickButton, {timeout: time}).should('have.css', 'display', 'block')
+        cy.get(div, {timeout: time}).should('have.css', 'display', 'block')
+    }
+
+    clickGreenButton(){
+        cy.get(greenButton).click()
     }
 }
 
