@@ -48,8 +48,6 @@ export class DropDownCheckboxesRadiobuttonsPage{
         cy.get(frontLanguageDropDown).should('have.value', language.toLowerCase())
     }
 
-<<<<<<< Updated upstream
-=======
     checkForCheckbox(checkbox){
         cy.get(checkbox).check().should('be.checked')
     }
@@ -65,7 +63,6 @@ export class DropDownCheckboxesRadiobuttonsPage{
     chooseRadioButtonColour(colour){
         cy.get(colour).check().should('be.checked')
     }
->>>>>>> Stashed changes
 }
 
 export const dropDownCheckboxesRadiobuttonsPage = new DropDownCheckboxesRadiobuttonsPage()

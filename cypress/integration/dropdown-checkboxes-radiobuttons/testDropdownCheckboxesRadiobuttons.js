@@ -57,8 +57,6 @@ describe('Tests for Dropdown, radio buttons and checkboxes', function(){
       }
     })
   })
-<<<<<<< Updated upstream
-=======
 
   it('Test checkboxes', function() {
     cy.fixture('dropDownCheckboxesRadiobuttons').then( function(testdata){
@@ -90,5 +88,4 @@ describe('Tests for Dropdown, radio buttons and checkboxes', function(){
     })
   })
 
->>>>>>> Stashed changes
 })
