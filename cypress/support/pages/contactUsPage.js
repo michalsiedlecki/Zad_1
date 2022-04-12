@@ -71,7 +71,7 @@ export class ContactUsPage{
         .click()
     }
 
-    checkErrorMessage(message){
+    checkResponseMessage(message){
         cy.contains(message)
     }
 }
